@@ -12,6 +12,7 @@ import javax.servlet.ServletRegistration.Dynamic;
 /**
  * Created by huc on 2017/2/28.
  */
+//入口
 public class WebInintializer implements WebApplicationInitializer{//是spring提供用来配置Servlet3.0+配置的借口，从而代替的web.xml的位置
 
     public void onStartup(ServletContext servletContext) throws ServletException {
