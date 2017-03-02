@@ -1,9 +1,8 @@
 package com.huc.action;
 
-import com.huc.bean.DemoBean;
+import com.huc.main.bean.DemoBean;
 import com.huc.config.ProfileConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.jca.cci.CciOperationNotSupportedException;
 
 /**
  * Created by huc on 2017/2/28.

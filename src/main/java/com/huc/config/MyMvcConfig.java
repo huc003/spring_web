@@ -4,6 +4,7 @@ import com.huc.interceptor.DemoInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.multipart.MultipartResolver;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.*;
@@ -15,6 +16,7 @@ import org.springframework.web.servlet.view.JstlView;
  */
 @Configuration
 @EnableWebMvc//1 开启Spring Mvc的支持，若无此句，重写WebMvcConfigurerAdapter 方法是无效的
+@EnableScheduling
 @ComponentScan("com.huc.*")
 public class MyMvcConfig extends WebMvcConfigurerAdapter{//2 继承WebMvcConfigurerAdapter类，重写其方法可对Spring Mvc进行配置
 
@@ -53,6 +55,7 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter{//2 继承WebMvcConfigu
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/toUpload").setViewName("/upload");//返回的显示层
         registry.addViewController("/sse").setViewName("/sse");//返回的显示层
+        registry.addViewController("/async").setViewName("/async");//返回的显示层
     }
 
 
